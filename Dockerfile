@@ -21,8 +21,9 @@ COPY . .
 
 RUN chmod +x gradlew
 
-# Кладём React туда, откуда Spring Boot раздаёт static
-COPY --from=frontend /frontend/dist ./src/main/resources/static
+RUN rm -rf src/main/resources/static && mkdir -p src/main/resources/static
+# COPY --from=frontend /frontend/dist ./src/main/resources/static
+COPY --from=frontend /frontend/dist/ src/main/resources/static/
 
 RUN ./gradlew build
 
@@ -38,4 +39,5 @@ COPY --from=backend /app/build/libs/*.jar ./app.jar
 
 EXPOSE 8080
 
-ENTRYPOINT ["java", "-jar", "/app/app.jar"]
+# ENTRYPOINT ["java", "-jar", "/app/app.jar"]
+ENTRYPOINT ["sh", "-c", "exec java $JAVA_OPTS -jar app.jar"]
