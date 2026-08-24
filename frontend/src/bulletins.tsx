@@ -15,6 +15,7 @@ import {
   ImageField,
   ImageInput,
   List,
+  Link,
   NumberField,
   NumberInput,
   required,
@@ -27,7 +28,6 @@ import {
   TextInput,
   useListContext,
 } from "react-admin";
-import { Link } from "react-router-dom";
 
 const stateChoices = [
   { id: "DRAFT", name: "Draft" },
