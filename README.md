@@ -1,27 +1,27 @@
 # Project DevOps Deploy
 
-Веб-приложение доски объявлений.
+Веб-приложение для работы с объявлениями.
 
-Проект состоит из:
+Проект состоит из backend на Spring Boot и frontend на React Admin. Приложение собирается в единый Docker-образ.
 
-* backend на Spring Boot;
-* frontend на React Admin + Vite;
-* базы данных H2 для локального запуска.
+## Docker
 
-Приложение упаковано в Docker-образ и может запускаться в контейнере.
-
-## Запуск Docker-контейнера
-
-Собрать Docker-образ:
+Для сборки Docker-образа выполните:
 
 ```bash
 docker build -t project-devops .
 ```
 
-Запустить контейнер:
+В результате будет создан Docker-образ:
+
+```text
+project-devops:latest
+```
+
+Запуск контейнера:
 
 ```bash
-docker run --rm -p 8080:8080 project-devops
+docker run --rm -p 8080:8080 project-devops:latest
 ```
 
 После запуска приложение доступно по адресу:
@@ -29,6 +29,7 @@ docker run --rm -p 8080:8080 project-devops
 ```text
 http://localhost:8080
 ```
+
 
 <br>
 <br>
