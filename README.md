@@ -1,5 +1,44 @@
 # Project DevOps Deploy
 
+Веб-приложение доски объявлений.
+
+Проект состоит из:
+
+* backend на Spring Boot;
+* frontend на React Admin + Vite;
+* базы данных H2 для локального запуска.
+
+Приложение упаковано в Docker-образ и может запускаться в контейнере.
+
+## Запуск Docker-контейнера
+
+Собрать Docker-образ:
+
+```bash
+docker build -t project-devops .
+```
+
+Запустить контейнер:
+
+```bash
+docker run --rm -p 8080:8080 project-devops
+```
+
+После запуска приложение доступно по адресу:
+
+```text
+http://localhost:8080
+```
+
+<br>
+<br>
+<br>
+
+
+
+
+# Project DevOps Deploy
+
 Bulletin board service.
 
 > **Fork policy**: this upstream repository is read-only. We do not review or merge pull requests and we do not accept infrastructure changes (Dockerfiles, Ansible roles, CI/CD workflows, etc.). To experiment or extend the project, fork it and work inside your own repository.
