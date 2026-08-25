@@ -1,3 +1,9 @@
+docker-build:
+	docker build -t project-devops .
+
+docker-run:
+	docker run -p 8080:8080 project-devops
+
 test:
 	./gradlew test
 
