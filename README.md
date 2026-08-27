@@ -1,5 +1,7 @@
 # Project DevOps Deploy
 
+[![CI/CD](https://github.com/Absaidov/project-devops-deploy/actions/workflows/main.yml/badge.svg?branch=main)](https://github.com/Absaidov/project-devops-deploy/actions/workflows/main.yml)
+
 Веб-приложение для работы с объявлениями.
 
 Проект состоит из backend на Spring Boot и frontend на React Admin. Приложение собирается в единый Docker-образ.
