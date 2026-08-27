@@ -87,6 +87,7 @@ jobs:
         with:
           context: .
           push: ${{ github.event_name == 'push' }}
+          provenance: false
           tags: |
             ${{ github.event_name == 'push' && format('cr.yandex/{0}/project-devops-deploy:latest', vars.YC_REGISTRY_ID) || format('project-devops-deploy:{0}', github.sha) }}
             ${{ github.event_name == 'push' && format('cr.yandex/{0}/project-devops-deploy:{1}', vars.YC_REGISTRY_ID, github.sha) || '' }}
